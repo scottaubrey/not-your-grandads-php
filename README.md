@@ -9,3 +9,7 @@ Team presentations on advances in PHP language over the last decade or two.
 At the time of writing, PFA required self-compiling PHP 8.6 from [this PR](https://github.com/arnaud-lb/php-src/pull/22)
 
 There's also one part of the presentation that assumes PHP 8.5 and 8.6 are installed from [homebrew-php](https://github.com/shivammathur/homebrew-php) tap in the default location for AppleSilicon macOS. Search "/opt/homebrew/opt/" and change the paths to get the example to work.
+
+## Run
+
+run `mise present` to run part 1, or `mise present2` for part 2.
