@@ -1,0 +1,69 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mfontanini/presenterm/master/config-file-schema.json
+defaults:
+  # override the terminal font size when in windows or when using sixel.
+  terminal_font_size: 16
+
+  # the theme to use by default in every presentation unless overridden.
+  theme: dark
+
+  # the image protocol to use.
+  image_protocol: kitty-local
+transition:
+  # how long the transition should last.
+  duration_millis: 750
+
+  # how many frames should be rendered during the transition
+  frames: 45
+
+  # the animation to use
+  animation:
+    style: fade
+typst:
+  # the pixels per inch when rendering latex/typst formulas.
+  ppi: 300
+
+mermaid:
+  # the scale parameter passed to the mermaid CLI (mmdc).
+  scale: 2
+
+options:
+  # whether slides are automatically terminated when a slide title is found.
+  implicit_slide_ends: false
+
+  # the prefix to use for commands.
+  command_prefix: ""
+
+  # show all lists incrementally, by implicitly adding pauses in between elements.
+  incremental_lists: false
+
+  # this option tells presenterm you don't care about extra parameters in
+  # presentation's front matter. This can be useful if you're trying to load a
+  # presentation made for another tool
+  strict_front_matter_parsing: true
+
+  # whether to treat a thematic break as a slide end.
+  end_slide_shorthand: false
+
+snippet:
+  exec:
+    # enable code snippet execution. Use at your own risk!
+    enable: true
+
+  exec_replace:
+    # enable code snippet automatic execution + replacing the snippet with its output. Use at your own risk!
+    enable: true
+
+  render:
+    # the number of threads to use when rendering `+render` code snippets.
+    threads: 2
+
+speaker_notes:
+  # The endpoint to listen for speaker note events.
+  listen_address: "127.0.0.1:59418"
+
+  # The endpoint to publish speaker note events.
+  publish_address: "127.0.0.1:59418"
+
+  # Whether to always publish speaker notes even when `--publish-speaker-notes` is not set.
+  always_publish: true

@@ -1,0 +1,17 @@
+[tools]
+# php = "8.5"
+"ubi:mfontanini/presenterm" = "latest"
+
+[env]
+
+[tasks.present]
+run = "presenterm -c presentation_config.yaml -x NotYourGrandadsPHP.md"
+
+[tasks.notes]
+run = "presenterm -c presentation_config.yaml --listen-speaker-notes NotYourGrandadsPHP.md"
+
+[tasks.present2]
+run = "presenterm -c presentation_config.yaml -x NotYourGrandadsPHP2.md"
+
+[tasks.notes2]
+run = "presenterm -c presentation_config.yaml --listen-speaker-notes NotYourGrandadsPHP2.md"
