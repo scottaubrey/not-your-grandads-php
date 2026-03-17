@@ -1,21 +1,6 @@
-
-
-<!-- end_slide -->
 Appendix
 ===================
 <!-- end_slide -->
-PHP 5.4 (2012)
-===================
-<!-- pause -->
-# short array syntax
-```php +exec
-<?php
-$array1 = array(1, 2, 3);
-//became
-$array2 = [1, 2, 3];
-
-var_dump($array1, $array2);
-```
 
 <!-- end_slide -->
 PHP 5.3 (2009)
@@ -202,45 +187,6 @@ $username = $username = $_GET['user'] ?? $_POST['user'] ?? 'nobody';
 echo $username.PHP_EOL;
 ```
 
-
-<!-- end_slide -->
-PHP 7.4 (2019)
-===================
-# Arrow functions
-```php +exec
-<?php
-$names = ['Andy', 'Sid'];
-$goodNames = array_filter($names, fn($name) => strlen($name) > 3);
-var_dump($goodNames);
-```
-
-<!-- end_slide -->
-PHP 8.0 (2020)
-===================
-# Named arguments
-```php +exec
-<?php
-function introduceYourself(?string $name = null, ?string $age = null, ?string $town = null)
-{
-    $sentences = ['Hello!'];
-    if ($name) {
-        $sentences[] = 'My name is '.$name.'.';
-    }
-    if ($age) {
-        $sentences[] = 'My age is '.$age.'.';
-    }
-    if ($town) {
-        $sentences[] = 'I live in '.$town.'.';
-    }
-    return implode (' ', $sentences).PHP_EOL;
-}
-echo introduceYourself(
-    null,
-    null,
-    'Shipley'
-);
-echo introduceYourself(town: 'Shipley');
-```
 
 <!-- end_slide -->
 PHP 8.0 (2020)
